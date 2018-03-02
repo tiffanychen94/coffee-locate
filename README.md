@@ -1,10 +1,12 @@
 # coffee-locate
 
 
-
 Maven:
 `mvn install` to download spark-core and gson dependencies
 
+Either javac Main.java to compile or run via IDE like Intellij. 
+
+After starting java ./Main: 
 Server reachable at 0.0.0.0:4567
 
 create: POST to /create with query params name, address, latitude, longitude.

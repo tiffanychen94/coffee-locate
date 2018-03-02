@@ -3,6 +3,7 @@ package app.coffeeshop;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
@@ -21,9 +22,10 @@ public class CoffeeShopDao {
     }
 
     public static List<String[]> readData() {
-        String file = "/Users/tiffache/tiff/locations.csv";
+        String filePath = new File("").getAbsolutePath();
+        filePath = filePath.concat("/src/main/java/app/locations.csv");
         List<String[]> content = new ArrayList<>();
-        try(BufferedReader br = new BufferedReader(new FileReader(file))) {
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line = "";
             while ((line = br.readLine()) != null) {
                 content.add(line.split(","));
